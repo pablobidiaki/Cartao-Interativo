@@ -1,31 +1,21 @@
 import React from "react";
 
 function Formulario(props){
-
     const form = document.getElementById('form')
     const final = document.getElementById('final')
-    const etapasConcluidas = 0
-    const manipularTela = 0
-
-    const finalizar = () => {
-        if(manipularTela == 1){
-            form.classList.add('none')
-            final.classList.remove('none')
-        }
-    }
 
     const validarInputs = () => {
+        const inputCvc = document.getElementById('inputCvc')
         const inputNome = document.getElementById('inputNome')
         const inputNumero = document.getElementById('inputNumero')
         const inputMes = document.getElementById('inputMes')
         const inputAno = document.getElementById('inputAno')
-        const inputCvc = document.getElementById('inputCvc')
         const MsgErro = document.getElementById('MsgErro')
 
         if(props.nome == "Seu nome aqui !" || props.nome == ''){
             inputNome.style.border = "1px solid red"
             MsgErro.innerHTML = "Os campos em vermelho estão incorretos"
-        } else{
+        } else {
             inputNome.style.border = '1px solid green'
         }
 
@@ -56,7 +46,14 @@ function Formulario(props){
         } else{
             inputCvc.style.border = '1px solid green'
         }
+
+        if(props.nome != '' && props.nome != "Seu nome aqui !" && props.numero != "0000 0000 0000 0000" && props.numero.length == 19 && props.mes != "00" && props.mes.length == 2 && props.ano != "00" && props.ano.length == 2 && props.cvc != "000" && props.cvc.length == 3){
+            form.classList.add('none')
+            final.classList.remove('none')
+        }
+
     }
+    
 
     return(
         <div id="form">
@@ -64,7 +61,6 @@ function Formulario(props){
 
             <input
             id="inputNome"
-            pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" 
             maxLength={25} 
             type='text' 
             value={props.nome} 
@@ -139,7 +135,11 @@ function Formulario(props){
                     }} 
                      placeholder={"Ex: 123"} />
             </div>
-            <button onClick={()=> validarInputs()}>Confirmar</button>
+            <button 
+            id="botao"
+             onClick={()=>
+             validarInputs()
+             }>Confirmar</button>
             <p id="MsgErro"></p>
         </div>
     )

@@ -153,3 +153,7 @@ button{
 .none{
   display: none;
 }
+
+.error{
+  border-radius: 0px;
+}
