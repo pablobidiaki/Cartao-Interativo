@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+html{
+  background-image: url('componentes/imgs/bg-main-desktop.png');
+  background-repeat: no-repeat;
+}
+
+label{
+  text-transform: uppercase;
+}
+
+input{
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 8px;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-top: 2px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+button{
+  display: block;
+  margin: 0 auto;
+  background-color: rgb(34, 9, 48);
+  color: white;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.validade{
+  width: 50px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.cvc{
+  width: 150px;
+  margin-left: 30px;
+}
+
+.formulario{
+  margin: 0px 100px;
+}
+
+.container{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.frenteCartao{
+  background-image: url('componentes/imgs/bg-card-front.png');
+  width: 447px;
+  height: 245px;
+  margin-bottom: 20px;
+  margin-left: -80px;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+}
+
+.frenteCartao img{
+  margin: 30px;
+}
+
+.frenteCartao p{
+  color: white;
+}
+
+.versoCartao{
+  background-image: url('componentes/imgs/bg-card-back.png');
+  width: 447px;
+  height: 245px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px;
+}
+
+.numero{
+  text-align: center;
+  font-size: xx-large;
+  letter-spacing: 1px;
+}
+
+.nomeValidade{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.nome{
+  margin-left: 30px;
+}
+
+.validadeRes{
+  margin-right: 35px;
+}
+
+.versoCvc{
+  text-align: end;
+  margin-right: 50px;
+  padding-top: 110px;
+  color: white;
+  font-weight: bolder;
+}
+
+#MsgErro{
+  color: red;
+  margin-top: 10px;
+  font-size: .8rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.obg{
+  font-size: large;
+  color: rgb(34, 9, 48);
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0px;
+}
+
+.msgFinal{
+  color: lightgray;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.imgFinal{
+  display: block;
+  margin: 0 auto;
+}
+
+.none{
+  display: none;
+}
